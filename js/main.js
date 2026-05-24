@@ -31,49 +31,49 @@ const GALLERY_DATA = [
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.11.jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.13.jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.13 (1).jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.13 (2).jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.14.jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.14 (1).jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.14 (2).jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.15.jpeg',
     category: 'portrait',
-    alt:      '[PHOTOGRAPHER NAME] — Portrait photography',
+    alt:      'Tahseen Ahmed Kiani — Portrait photography',
     caption:  'Portrait' // PLACEHOLDER: photo-captions
   },
 
@@ -81,43 +81,43 @@ const GALLERY_DATA = [
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.15 (1).jpeg',
     category: 'editorial',
-    alt:      '[PHOTOGRAPHER NAME] — Editorial photography',
+    alt:      'Tahseen Ahmed Kiani — Editorial photography',
     caption:  'Editorial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.15 (2).jpeg',
     category: 'editorial',
-    alt:      '[PHOTOGRAPHER NAME] — Editorial photography',
+    alt:      'Tahseen Ahmed Kiani — Editorial photography',
     caption:  'Editorial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16.jpeg',
     category: 'editorial',
-    alt:      '[PHOTOGRAPHER NAME] — Editorial photography',
+    alt:      'Tahseen Ahmed Kiani — Editorial photography',
     caption:  'Editorial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16 (1).jpeg',
     category: 'editorial',
-    alt:      '[PHOTOGRAPHER NAME] — Editorial photography',
+    alt:      'Tahseen Ahmed Kiani — Editorial photography',
     caption:  'Editorial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16 (2).jpeg',
     category: 'editorial',
-    alt:      '[PHOTOGRAPHER NAME] — Editorial photography',
+    alt:      'Tahseen Ahmed Kiani — Editorial photography',
     caption:  'Editorial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16 (3).jpeg',
     category: 'editorial',
-    alt:      '[PHOTOGRAPHER NAME] — Editorial photography',
+    alt:      'Tahseen Ahmed Kiani — Editorial photography',
     caption:  'Editorial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17.jpeg',
     category: 'editorial',
-    alt:      '[PHOTOGRAPHER NAME] — Editorial photography',
+    alt:      'Tahseen Ahmed Kiani — Editorial photography',
     caption:  'Editorial' // PLACEHOLDER: photo-captions
   },
 
@@ -125,49 +125,49 @@ const GALLERY_DATA = [
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (1).jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (2).jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (3).jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (4).jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.18.jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.18 (1).jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.19.jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20.jpeg',
     category: 'commercial',
-    alt:      '[PHOTOGRAPHER NAME] — Commercial photography',
+    alt:      'Tahseen Ahmed Kiani — Commercial photography',
     caption:  'Commercial' // PLACEHOLDER: photo-captions
   },
 
@@ -175,43 +175,43 @@ const GALLERY_DATA = [
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (1).jpeg',
     category: 'events',
-    alt:      '[PHOTOGRAPHER NAME] — Events photography',
+    alt:      'Tahseen Ahmed Kiani — Events photography',
     caption:  'Events' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (2).jpeg',
     category: 'events',
-    alt:      '[PHOTOGRAPHER NAME] — Events photography',
+    alt:      'Tahseen Ahmed Kiani — Events photography',
     caption:  'Events' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (3).jpeg',
     category: 'events',
-    alt:      '[PHOTOGRAPHER NAME] — Events photography',
+    alt:      'Tahseen Ahmed Kiani — Events photography',
     caption:  'Events' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (4).jpeg',
     category: 'events',
-    alt:      '[PHOTOGRAPHER NAME] — Events photography',
+    alt:      'Tahseen Ahmed Kiani — Events photography',
     caption:  'Events' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (5).jpeg',
     category: 'events',
-    alt:      '[PHOTOGRAPHER NAME] — Events photography',
+    alt:      'Tahseen Ahmed Kiani — Events photography',
     caption:  'Events' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.21.jpeg',
     category: 'events',
-    alt:      '[PHOTOGRAPHER NAME] — Events photography',
+    alt:      'Tahseen Ahmed Kiani — Events photography',
     caption:  'Events' // PLACEHOLDER: photo-captions
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.21 (1).jpeg',
     category: 'events',
-    alt:      '[PHOTOGRAPHER NAME] — Events photography',
+    alt:      'Tahseen Ahmed Kiani — Events photography',
     caption:  'Events' // PLACEHOLDER: photo-captions
   },
 ];
@@ -520,7 +520,7 @@ navLinks.querySelectorAll('a').forEach(function(link) {
   // About portrait — use second image as placeholder headshot
   if (ABOUT_IMG && GALLERY_DATA.length > 1) {
     ABOUT_IMG.src = encPath(GALLERY_DATA[1].src);
-    ABOUT_IMG.alt = '[PHOTOGRAPHER NAME] — portrait'; // PLACEHOLDER: photo-captions
+    ABOUT_IMG.alt = 'Tahseen Ahmed Kiani — portrait'; // PLACEHOLDER: photo-captions
   }
 }());
 
