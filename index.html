@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PLACEHOLDER: photographer-name → replace TAHSEEN AHMED KIANI throughout -->
+  <title>TAHSEEN AHMED KIANI — Photography</title>
+  <meta name="description" content="TAHSEEN AHMED KIANI — documentary, portrait and editorial photographer. Professional portfolio.">
+  <meta name="author" content="TAHSEEN AHMED KIANI">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TAHSEEN AHMED KIANI — Photography">
+  <meta property="og:description" content="Documentary, portrait and editorial photographer.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cormorant Garamond (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom cursor dot -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <a class="nav__logo" href="#hero" aria-label="TAHSEEN AHMED KIANI — home">
+      <!-- PLACEHOLDER: photographer-name → replace TAHSEEN AHMED KIANI -->
+      TAHSEEN AHMED KIANI
+    </a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav__links" id="navLinks" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- =====================================================
+         HERO — full-screen landing
+         ===================================================== -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero__bg-wrap">
+        <!-- Hero image is set dynamically by JS from first gallery image -->
+        <img class="hero__bg" id="heroBg" src="" alt="TAHSEEN AHMED KIANI — photography" loading="eager">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Photography</p>
+        <!-- PLACEHOLDER: photographer-name → replace TAHSEEN AHMED KIANI -->
+        <h1 class="hero__name reveal">
+          <span class="hero__name-first">[PHOTOGRAPHER</span>
+          <span class="hero__name-last"> NAME]</span>
+        </h1>
+        <p class="hero__tagline reveal">Documentary &nbsp;·&nbsp; Editorial &nbsp;·&nbsp; Portrait</p>
+      </div>
+      <a class="hero__scroll" href="#about" aria-label="Scroll to about section">
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- =====================================================
+         ABOUT
+         ===================================================== -->
+    <!-- PLACEHOLDER: bio → replace with artist statement from content/bio.md -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__image-wrap reveal">
+            <figure>
+              <!-- PLACEHOLDER: photo-captions → add photographer portrait / headshot -->
+              <img
+                class="about__portrait"
+                id="aboutPortrait"
+                src=""
+                alt="TAHSEEN AHMED KIANI"
+                loading="lazy"
+              >
+            </figure>
+          </div>
+          <div class="about__text">
+            <p class="section-label reveal">About</p>
+            <!-- PLACEHOLDER: photographer-name → replace TAHSEEN AHMED KIANI -->
+            <h2 id="about-heading" class="about__heading reveal">TAHSEEN AHMED KIANI</h2>
+            <!-- PLACEHOLDER: bio → replace the paragraphs below with content/bio.md -->
+            <div class="about__body">
+              <p class="reveal">
+                TAHSEEN AHMED KIANI is a London-based documentary and portrait photographer whose work spans
+                four continents over more than a decade of professional practice. Their images explore
+                the intersection of identity, culture, and environment — commissioned by leading international
+                editorial and commercial clients while sustaining a deeply personal documentary practice.
+              </p>
+              <p class="reveal">
+                Their photographs have appeared in <em>[PUBLICATION NAME]</em>, <em>[PUBLICATION NAME]</em>,
+                and <em>[PUBLICATION NAME]</em>, and have been exhibited at <em>[GALLERY / VENUE NAME]</em>.
+                A recipient of the <em>[AWARD NAME]</em> grant, they continue to develop long-form projects
+                alongside commercial commissions.
+              </p>
+              <p class="reveal">
+                Based between London and [CITY], TAHSEEN AHMED KIANI is available for editorial,
+                commercial, and documentary commissions worldwide.
+              </p>
+            </div>
+            <!-- PLACEHOLDER: contact → replace email below -->
+            <a class="btn-text reveal" href="mailto:[EMAIL ADDRESS]">Get in touch &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PORTFOLIO / GALLERY
+         ===================================================== -->
+    <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <div class="portfolio__header reveal">
+          <p class="section-label">Work</p>
+          <h2 id="portfolio-heading">Portfolio</h2>
+        </div>
+
+        <!-- Category filter bar -->
+        <!-- NOTE: categories are defined in js/main.js GALLERY_DATA — update there -->
+        <div class="filter" id="filter" role="tablist" aria-label="Portfolio categories">
+          <button class="filter__btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter__btn" data-filter="portrait" role="tab" aria-selected="false">Portrait</button>
+          <button class="filter__btn" data-filter="editorial" role="tab" aria-selected="false">Editorial</button>
+          <button class="filter__btn" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+          <button class="filter__btn" data-filter="events" role="tab" aria-selected="false">Events</button>
+        </div>
+
+        <!-- Gallery masonry grid — populated by js/main.js -->
+        <!-- PLACEHOLDER: photo-captions → add alt text and figcaptions per photo in GALLERY_DATA in js/main.js -->
+        <div class="gallery" id="gallery" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         EXPERIENCE / CV
+         ===================================================== -->
+    <!-- PLACEHOLDER: cv → replace timeline entries below with content from content/cv.md -->
+    <section class="experience" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="experience__header reveal">
+          <p class="section-label">Background</p>
+          <h2 id="experience-heading">Experience</h2>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline__item reveal">
+            <div class="timeline__year">
+              <!-- PLACEHOLDER: cv → replace year range -->
+              2024 &ndash; Present
+            </div>
+            <div class="timeline__content">
+              <!-- PLACEHOLDER: cv → replace role/employer/description -->
+              <h3>[CURRENT ROLE / PROJECT TITLE]</h3>
+              <p class="timeline__org">[EMPLOYER / CLIENT / PUBLICATION]</p>
+              <p>[Description of the work, scope, and achievements. Replace with content from content/cv.md]</p>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__year">
+              <!-- PLACEHOLDER: cv → replace year range -->
+              2021 &ndash; 2024
+            </div>
+            <div class="timeline__content">
+              <h3>[ROLE / PROJECT TITLE]</h3>
+              <p class="timeline__org">[EMPLOYER / CLIENT / PUBLICATION]</p>
+              <p>[Description of the work, scope, and achievements. Replace with content from content/cv.md]</p>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__year">
+              <!-- PLACEHOLDER: cv → replace year range -->
+              2018 &ndash; 2021
+            </div>
+            <div class="timeline__content">
+              <h3>[ROLE / PROJECT TITLE]</h3>
+              <p class="timeline__org">[EMPLOYER / CLIENT / PUBLICATION]</p>
+              <p>[Description of the work, scope, and achievements. Replace with content from content/cv.md]</p>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__year">
+              <!-- PLACEHOLDER: cv → replace year range -->
+              2015 &ndash; 2018
+            </div>
+            <div class="timeline__content">
+              <h3>[ROLE / PROJECT TITLE]</h3>
+              <p class="timeline__org">[EMPLOYER / CLIENT / PUBLICATION]</p>
+              <p>[Description of the work, scope, and achievements. Replace with content from content/cv.md]</p>
+            </div>
+          </article>
+
+          <!-- PLACEHOLDER: cv → add additional timeline entries as needed -->
+
+        </div>
+
+        <!-- Awards / Recognition row -->
+        <div class="awards reveal">
+          <p class="section-label">Recognition</p>
+          <div class="awards__grid">
+            <!-- PLACEHOLDER: cv → replace award entries -->
+            <div class="award__item">
+              <span class="award__year">[YEAR]</span>
+              <span class="award__name">[AWARD / GRANT NAME]</span>
+              <span class="award__body">[AWARDING BODY]</span>
+            </div>
+            <div class="award__item">
+              <span class="award__year">[YEAR]</span>
+              <span class="award__name">[AWARD / GRANT NAME]</span>
+              <span class="award__body">[AWARDING BODY]</span>
+            </div>
+            <div class="award__item">
+              <span class="award__year">[YEAR]</span>
+              <span class="award__name">[EXHIBITION / SHOW TITLE]</span>
+              <span class="award__body">[GALLERY NAME, CITY]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CLIENTS / PUBLICATIONS
+         ===================================================== -->
+    <!-- PLACEHOLDER: clients → replace list below with content from content/clients.md -->
+    <section class="clients" id="clients" aria-labelledby="clients-heading">
+      <div class="container">
+        <div class="clients__header reveal">
+          <p class="section-label">Collaborations</p>
+          <h2 id="clients-heading">Clients &amp; Publications</h2>
+        </div>
+        <!-- PLACEHOLDER: clients → replace these names with real clients from content/clients.md -->
+        <ul class="clients__grid reveal" role="list">
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+          <li>[CLIENT / PUBLICATION NAME]</li>
+        </ul>
+        <!-- PLACEHOLDER: clients → add more rows as needed -->
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+    <!-- PLACEHOLDER: contact → replace all [CONTACT DETAILS] below with real information -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__inner reveal">
+          <p class="section-label">Get in touch</p>
+          <h2 id="contact-heading" class="contact__heading">Let's work together.</h2>
+          <!-- PLACEHOLDER: contact → replace email address -->
+          <a class="contact__email" href="mailto:[EMAIL ADDRESS]">[EMAIL ADDRESS]</a>
+
+          <div class="contact__details">
+            <!-- PLACEHOLDER: contact → replace phone number -->
+            <p><span class="contact__label">Phone</span><a href="tel:[PHONE NUMBER]">[PHONE NUMBER]</a></p>
+            <!-- PLACEHOLDER: contact → replace location -->
+            <p><span class="contact__label">Based in</span>[CITY, COUNTRY]</p>
+            <!-- PLACEHOLDER: contact → replace availability note -->
+            <p><span class="contact__label">Availability</span>[AVAILABLE FOR: types of work, regions]</p>
+          </div>
+
+          <!-- PLACEHOLDER: contact → replace social media links -->
+          <div class="contact__social">
+            <a href="[INSTAGRAM URL]" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="[LINKEDIN URL]" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="[WEBSITE / OTHER URL]" target="_blank" rel="noopener noreferrer" aria-label="Portfolio">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <!-- PLACEHOLDER: photographer-name → replace TAHSEEN AHMED KIANI -->
+        <span class="footer__name">TAHSEEN AHMED KIANI</span>
+        <span class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</span>
+        <!-- PLACEHOLDER: contact → replace social links -->
+        <nav class="footer__social" aria-label="Social links">
+          <a href="[INSTAGRAM URL]" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="[LINKEDIN URL]" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       LIGHTBOX OVERLAY
+       ===================================================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <button class="lightbox__close" id="lbClose" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox__prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+    <button class="lightbox__next" id="lbNext" aria-label="Next image">&#8250;</button>
+    <div class="lightbox__stage">
+      <figure class="lightbox__figure">
+        <!-- PLACEHOLDER: photo-captions → captions are set dynamically from GALLERY_DATA in js/main.js -->
+        <img class="lightbox__img" id="lbImg" src="" alt="">
+        <figcaption class="lightbox__caption" id="lbCaption"></figcaption>
+      </figure>
+    </div>
+    <div class="lightbox__counter" id="lbCounter" aria-live="polite"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
