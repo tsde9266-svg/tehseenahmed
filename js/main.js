@@ -1,80 +1,63 @@
-/* =====================================================
-   js/main.js — Photography Portfolio
-   =====================================================
-   Sections:
-   1. Gallery Data  ← PLACEHOLDER: photo-captions — update alt + caption fields
-   2. Gallery Render
-   3. Category Filter
-   4. Lightbox
-   5. Scroll Reveal
-   6. Navigation (scroll state + mobile toggle)
-   7. Custom Cursor
-   8. Hero Image
-   9. Footer Year
-   ===================================================== */
-
 'use strict';
 
 /* =====================================================
-   1. GALLERY DATA
-   PLACEHOLDER: photo-captions → update the `alt` and `caption`
-   fields for each image below with real descriptions.
-
-   PLACEHOLDER: photographer-name → replace [PHOTOGRAPHER NAME]
-   in every alt string.
-
-   Category assignment is arbitrary (images were flat, no subfolders).
-   Move images to the correct category as needed.
+   1. GALLERY DATA — 37 images, 4 categories
    ===================================================== */
 const GALLERY_DATA = [
-  /* ── PORTRAIT (8 images) ── */
+  /* ── PORTRAIT (9 images) ── */
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.11.jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.13.jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.13 (1).jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.13 (2).jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.14.jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.14 (1).jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.14 (2).jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.15.jpeg',
     category: 'portrait',
     alt:      'Tahseen Ahmed Kiani — Portrait photography',
-    caption:  'Portrait' // PLACEHOLDER: photo-captions
+    caption:  'Portrait'
+  },
+  {
+    src:      'assests/WhatsApp Image 2026-06-04 at 09.57.51.jpeg',
+    category: 'portrait',
+    alt:      'Tahseen Ahmed Kiani — Portrait, wedding ceremony',
+    caption:  'Portrait — Wedding ceremony'
   },
 
   /* ── EDITORIAL (7 images) ── */
@@ -82,137 +65,173 @@ const GALLERY_DATA = [
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.15 (1).jpeg',
     category: 'editorial',
     alt:      'Tahseen Ahmed Kiani — Editorial photography',
-    caption:  'Editorial' // PLACEHOLDER: photo-captions
+    caption:  'Editorial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.15 (2).jpeg',
     category: 'editorial',
     alt:      'Tahseen Ahmed Kiani — Editorial photography',
-    caption:  'Editorial' // PLACEHOLDER: photo-captions
+    caption:  'Editorial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16.jpeg',
     category: 'editorial',
     alt:      'Tahseen Ahmed Kiani — Editorial photography',
-    caption:  'Editorial' // PLACEHOLDER: photo-captions
+    caption:  'Editorial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16 (1).jpeg',
     category: 'editorial',
     alt:      'Tahseen Ahmed Kiani — Editorial photography',
-    caption:  'Editorial' // PLACEHOLDER: photo-captions
+    caption:  'Editorial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16 (2).jpeg',
     category: 'editorial',
     alt:      'Tahseen Ahmed Kiani — Editorial photography',
-    caption:  'Editorial' // PLACEHOLDER: photo-captions
+    caption:  'Editorial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.16 (3).jpeg',
     category: 'editorial',
     alt:      'Tahseen Ahmed Kiani — Editorial photography',
-    caption:  'Editorial' // PLACEHOLDER: photo-captions
+    caption:  'Editorial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17.jpeg',
     category: 'editorial',
     alt:      'Tahseen Ahmed Kiani — Editorial photography',
-    caption:  'Editorial' // PLACEHOLDER: photo-captions
+    caption:  'Editorial'
   },
 
-  /* ── COMMERCIAL (8 images) ── */
+  /* ── COMMERCIAL (9 images) ── */
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (1).jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (2).jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (3).jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.17 (4).jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.18.jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.18 (1).jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.19.jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20.jpeg',
     category: 'commercial',
     alt:      'Tahseen Ahmed Kiani — Commercial photography',
-    caption:  'Commercial' // PLACEHOLDER: photo-captions
+    caption:  'Commercial'
+  },
+  {
+    src:      'assests/WhatsApp Image 2026-06-04 at 09.57.51 (2).jpeg',
+    category: 'commercial',
+    alt:      'Tahseen Ahmed Kiani — Luxury bridal fleet photography',
+    caption:  'Commercial — Luxury bridal fleet'
   },
 
-  /* ── EVENTS (7 images) ── */
+  /* ── EVENTS (12 images) ── */
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (1).jpeg',
     category: 'events',
-    alt:      'Tahseen Ahmed Kiani — Events photography',
-    caption:  'Events' // PLACEHOLDER: photo-captions
+    alt:      'Tahseen Ahmed Kiani — Event photography',
+    caption:  'Events'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (2).jpeg',
     category: 'events',
-    alt:      'Tahseen Ahmed Kiani — Events photography',
-    caption:  'Events' // PLACEHOLDER: photo-captions
+    alt:      'Tahseen Ahmed Kiani — Event photography',
+    caption:  'Events'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (3).jpeg',
     category: 'events',
-    alt:      'Tahseen Ahmed Kiani — Events photography',
-    caption:  'Events' // PLACEHOLDER: photo-captions
+    alt:      'Tahseen Ahmed Kiani — Event photography',
+    caption:  'Events'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (4).jpeg',
     category: 'events',
-    alt:      'Tahseen Ahmed Kiani — Events photography',
-    caption:  'Events' // PLACEHOLDER: photo-captions
+    alt:      'Tahseen Ahmed Kiani — Event photography',
+    caption:  'Events'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.20 (5).jpeg',
     category: 'events',
-    alt:      'Tahseen Ahmed Kiani — Events photography',
-    caption:  'Events' // PLACEHOLDER: photo-captions
+    alt:      'Tahseen Ahmed Kiani — Event photography',
+    caption:  'Events'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.21.jpeg',
     category: 'events',
-    alt:      'Tahseen Ahmed Kiani — Events photography',
-    caption:  'Events' // PLACEHOLDER: photo-captions
+    alt:      'Tahseen Ahmed Kiani — Event photography',
+    caption:  'Events'
   },
   {
     src:      'assests/WhatsApp Image 2026-05-24 at 21.28.21 (1).jpeg',
     category: 'events',
-    alt:      'Tahseen Ahmed Kiani — Events photography',
-    caption:  'Events' // PLACEHOLDER: photo-captions
+    alt:      'Tahseen Ahmed Kiani — Event photography',
+    caption:  'Events'
+  },
+  {
+    src:      'assests/WhatsApp Image 2026-06-04 at 09.57.51 (1).jpeg',
+    category: 'events',
+    alt:      'Tahseen Ahmed Kiani — Wedding nikah ceremony',
+    caption:  'Events — Nikah ceremony'
+  },
+  {
+    src:      'assests/WhatsApp Image 2026-06-04 at 09.57.52 (1).jpeg',
+    category: 'events',
+    alt:      'Tahseen Ahmed Kiani — Formal gathering event photography',
+    caption:  'Events — Formal gathering'
+  },
+  {
+    src:      'assests/WhatsApp Image 2026-06-04 at 09.57.52 (2).jpeg',
+    category: 'events',
+    alt:      'Tahseen Ahmed Kiani — Community gathering event coverage',
+    caption:  'Events — Community gathering'
+  },
+  {
+    src:      'assests/WhatsApp Image 2026-06-04 at 09.57.52 (4).jpeg',
+    category: 'events',
+    alt:      'Tahseen Ahmed Kiani — Corporate ceremony photography',
+    caption:  'Events — Corporate ceremony'
+  },
+  {
+    src:      'assests/WhatsApp Image 2026-06-04 at 09.57.52 (5).jpeg',
+    category: 'events',
+    alt:      'Tahseen Ahmed Kiani — Grand Inauguration Ceremony',
+    caption:  'Events — Grand Inauguration Ceremony'
   },
 ];
 
@@ -224,8 +243,8 @@ const HERO_BG     = document.getElementById('heroBg');
 const ABOUT_IMG   = document.getElementById('aboutPortrait');
 
 let currentFilter    = 'all';
-let filteredIndices  = [];   // indices into GALLERY_DATA for the current filter
-let lightboxIndex    = 0;    // position within filteredIndices
+let filteredIndices  = [];
+let lightboxIndex    = 0;
 
 function encPath(raw) {
   return encodeURI(raw);
@@ -276,7 +295,6 @@ function buildGallery(filter) {
     });
   });
 
-  // Trigger scroll-reveal on newly rendered items
   observeRevealElements();
 }
 
@@ -322,8 +340,6 @@ function openLightbox(posInFiltered) {
   lightbox.classList.add('is-open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.classList.add('lightbox-open');
-
-  // Focus trap
   lbClose.focus();
 }
 
@@ -343,10 +359,7 @@ function showLightboxImage(pos) {
   };
   lbImg.src = encPath(item.src);
   lbImg.alt = item.alt;
-
-  // PLACEHOLDER: photo-captions → caption is drawn from GALLERY_DATA caption field
   lbCaption.textContent = item.caption + ' — ' + item.alt;
-
   lbCounter.textContent = (pos + 1) + ' / ' + filteredIndices.length;
 }
 
@@ -364,14 +377,12 @@ lbClose.addEventListener('click', closeLightbox);
 lbPrev.addEventListener('click', lightboxPrev);
 lbNext.addEventListener('click', lightboxNext);
 
-// Close on backdrop click
 lightbox.addEventListener('click', function(e) {
   if (e.target === lightbox || e.target.classList.contains('lightbox__stage')) {
     closeLightbox();
   }
 });
 
-// Keyboard navigation
 document.addEventListener('keydown', function(e) {
   if (!lightbox.classList.contains('is-open')) return;
   switch (e.key) {
@@ -381,7 +392,6 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// Touch/swipe support on lightbox
 (function() {
   let touchStartX = 0;
   lightbox.addEventListener('touchstart', function(e) {
@@ -402,7 +412,6 @@ let revealObserver;
 
 function observeRevealElements() {
   if (!('IntersectionObserver' in window)) {
-    // Fallback: show all
     document.querySelectorAll('.reveal').forEach(function(el) {
       el.classList.add('is-visible');
     });
@@ -448,7 +457,6 @@ navToggle.addEventListener('click', function() {
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
-// Close mobile nav when a link is clicked
 navLinks.querySelectorAll('a').forEach(function(link) {
   link.addEventListener('click', function() {
     navLinks.classList.remove('is-open');
@@ -489,7 +497,6 @@ navLinks.querySelectorAll('a').forEach(function(link) {
     el.addEventListener('mouseleave', function() { cursor.classList.remove('cursor--hover'); });
   }
 
-  // Also observe dynamically added gallery items
   const mutObs = new MutationObserver(function(mutations) {
     mutations.forEach(function(m) {
       m.addedNodes.forEach(function(node) {
@@ -506,21 +513,21 @@ navLinks.querySelectorAll('a').forEach(function(link) {
 }());
 
 /* =====================================================
-   8. HERO IMAGE — set from first gallery image
+   8. HERO IMAGE — Grand Inauguration Ceremony as hero
+      About portrait — formal portrait from ceremony
    ===================================================== */
 (function() {
-  if (!HERO_BG || GALLERY_DATA.length === 0) return;
-  const firstImg = GALLERY_DATA[0];
-  HERO_BG.src = encPath(firstImg.src);
-  HERO_BG.alt = firstImg.alt;
-  HERO_BG.addEventListener('load', function() {
-    HERO_BG.classList.add('is-loaded');
-  });
+  if (HERO_BG) {
+    HERO_BG.src = encPath('assests/WhatsApp Image 2026-06-04 at 09.57.52 (5).jpeg');
+    HERO_BG.alt = 'Tahseen Ahmed Kiani — Grand Inauguration Ceremony';
+    HERO_BG.addEventListener('load', function() {
+      HERO_BG.classList.add('is-loaded');
+    });
+  }
 
-  // About portrait — use second image as placeholder headshot
-  if (ABOUT_IMG && GALLERY_DATA.length > 1) {
-    ABOUT_IMG.src = encPath(GALLERY_DATA[1].src);
-    ABOUT_IMG.alt = 'Tahseen Ahmed Kiani — portrait'; // PLACEHOLDER: photo-captions
+  if (ABOUT_IMG) {
+    ABOUT_IMG.src = encPath('assests/WhatsApp Image 2026-06-04 at 09.57.51.jpeg');
+    ABOUT_IMG.alt = 'Tahseen Ahmed Kiani — portrait photography';
   }
 }());
 
