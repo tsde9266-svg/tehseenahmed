@@ -526,8 +526,8 @@ navLinks.querySelectorAll('a').forEach(function(link) {
   }
 
   if (ABOUT_IMG) {
-    ABOUT_IMG.src = encPath('assests/WhatsApp Image 2026-06-04 at 09.57.51.jpeg');
-    ABOUT_IMG.alt = 'Tahseen Ahmed Kiani — portrait photography';
+    ABOUT_IMG.src = encPath('assests/WhatsApp Image 2026-05-24 at 21.28.13.jpeg');
+    ABOUT_IMG.alt = 'Tahseen Ahmed Kiani — professional photographer';
   }
 }());
 
