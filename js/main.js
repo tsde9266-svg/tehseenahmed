@@ -513,13 +513,13 @@ navLinks.querySelectorAll('a').forEach(function(link) {
 }());
 
 /* =====================================================
-   8. HERO IMAGE — Grand Inauguration Ceremony as hero
+   8. HERO IMAGE — Wedding group portrait as hero
       About portrait — formal portrait from ceremony
    ===================================================== */
 (function() {
   if (HERO_BG) {
-    HERO_BG.src = encPath('assests/WhatsApp Image 2026-06-04 at 09.57.52 (5).jpeg');
-    HERO_BG.alt = 'Tahseen Ahmed Kiani — Grand Inauguration Ceremony';
+    HERO_BG.src = encPath('assests/WhatsApp Image 2026-06-04 at 09.57.52 (1).jpeg');
+    HERO_BG.alt = 'Tahseen Ahmed Kiani — Formal gathering event photography';
     HERO_BG.addEventListener('load', function() {
       HERO_BG.classList.add('is-loaded');
     });
