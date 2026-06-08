@@ -513,13 +513,13 @@ navLinks.querySelectorAll('a').forEach(function(link) {
 }());
 
 /* =====================================================
-   8. HERO IMAGE — Wedding group portrait as hero
+   8. HERO IMAGE — Tahseen at work as a photographer
       About portrait — formal portrait from ceremony
    ===================================================== */
 (function() {
   if (HERO_BG) {
-    HERO_BG.src = encPath('assests/WhatsApp Image 2026-06-04 at 09.57.52 (1).jpeg');
-    HERO_BG.alt = 'Tahseen Ahmed Kiani — Formal gathering event photography';
+    HERO_BG.src = encPath('assests/WhatsApp Image 2026-05-24 at 21.28.13 (1).jpeg');
+    HERO_BG.alt = 'Tahseen Ahmed Kiani — photographer at work, capturing a shot';
     HERO_BG.addEventListener('load', function() {
       HERO_BG.classList.add('is-loaded');
     });
