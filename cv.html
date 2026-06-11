@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Tahseen Ahmed Kiani | Photographer</title>
+  <meta name="description" content="Curriculum Vitae — Tahseen Ahmed Kiani, Professional Photographer, Gujarkhan, Pakistan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Variables ── */
+    :root {
+      --black:   #0a0a0a;
+      --white:   #f5f0eb;
+      --gold:    #c9a96e;
+      --grey:    #888;
+      --border:  rgba(201,169,110,.25);
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-body:    'DM Sans', system-ui, sans-serif;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Screen layout ── */
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--ff-body);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Top bar (screen only) ── */
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(10,10,10,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .9rem 2.5rem;
+    }
+    .topbar__back {
+      font-family: var(--ff-body);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--grey);
+      transition: color .2s;
+    }
+    .topbar__back:hover { color: var(--white); text-decoration: none; }
+    .topbar__print {
+      font-family: var(--ff-body);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      padding: .55rem 1.4rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity .2s;
+    }
+    .topbar__print:hover { opacity: .85; }
+
+    /* ── CV wrapper ── */
+    .cv {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 8rem 3rem 6rem;
+    }
+
+    /* ── Header ── */
+    .cv__header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .cv__label {
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .cv__name {
+      font-family: var(--ff-display);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 300;
+      letter-spacing: .04em;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: .6rem;
+    }
+    .cv__title {
+      font-family: var(--ff-display);
+      font-size: 1.15rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+    }
+    .cv__contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem 2rem;
+      font-size: .85rem;
+      color: var(--grey);
+    }
+    .cv__contact-row span { color: var(--white); }
+
+    /* ── Section ── */
+    .cv__section {
+      margin-bottom: 3rem;
+    }
+    .cv__section-title {
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Profile ── */
+    .cv__profile p + p { margin-top: .8rem; }
+    .cv__profile p { color: #c5c0b8; font-size: .92rem; }
+
+    /* ── Experience ── */
+    .exp__item + .exp__item { margin-top: 2.2rem; }
+    .exp__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: .3rem;
+      margin-bottom: .4rem;
+    }
+    .exp__role {
+      font-family: var(--ff-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+    .exp__period {
+      font-size: .8rem;
+      color: var(--gold);
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+    .exp__org {
+      font-size: .85rem;
+      color: var(--grey);
+      margin-bottom: .6rem;
+    }
+    .exp__desc {
+      font-size: .88rem;
+      color: #c5c0b8;
+    }
+
+    /* ── Skills grid ── */
+    .skills__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+    }
+    .skill__cat h4 {
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .5rem;
+    }
+    .skill__cat ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skill__cat ul li {
+      font-size: .88rem;
+      color: #c5c0b8;
+      padding: .18rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+
+    /* ── Specialisms list ── */
+    .spec__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .spec__tag {
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      color: #c5c0b8;
+      padding: .35rem .9rem;
+    }
+
+    /* ── Certification ── */
+    .cert__item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .cert__year {
+      font-family: var(--ff-display);
+      font-size: 1.1rem;
+      color: var(--gold);
+      min-width: 48px;
+    }
+    .cert__body h4 {
+      font-size: .95rem;
+      color: var(--white);
+      margin-bottom: .25rem;
+    }
+    .cert__body p { font-size: .84rem; color: var(--grey); }
+
+    /* ── Clients ── */
+    .clients__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: .3rem 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    .clients__list li {
+      font-size: .88rem;
+      color: #c5c0b8;
+      padding: .28rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .clients__list li::before {
+      content: "— ";
+      color: var(--gold);
+      font-size: .75rem;
+    }
+
+    /* ── Languages ── */
+    .lang__row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .lang__item strong {
+      display: block;
+      font-size: .88rem;
+      color: var(--white);
+      margin-bottom: .1rem;
+    }
+    .lang__item span { font-size: .8rem; color: var(--grey); }
+
+    /* ── Footer ── */
+    .cv__footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: .78rem;
+      color: var(--grey);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+
+    /* ══════════════════════════════════════════
+       PRINT / PDF styles
+       ══════════════════════════════════════════ */
+    @media print {
+      :root {
+        --black:  #ffffff;
+        --white:  #111111;
+        --gold:   #8a6a2e;
+        --grey:   #555555;
+        --border: rgba(0,0,0,.15);
+      }
+
+      body {
+        background: #fff;
+        color: #111;
+        font-size: 11pt;
+      }
+
+      .topbar { display: none !important; }
+
+      .cv {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .cv__profile p,
+      .exp__desc,
+      .skill__cat ul li,
+      .clients__list li { color: #333; }
+
+      .spec__tag { border-color: #ccc; color: #333; }
+
+      a { color: var(--gold); }
+
+      @page {
+        size: A4;
+        margin: 18mm 20mm;
+      }
+
+      .cv__section { page-break-inside: avoid; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .cv { padding: 7rem 1.4rem 4rem; }
+      .topbar { padding: .9rem 1.2rem; }
+      .exp__meta { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar — screen only -->
+  <div class="topbar" aria-hidden="false">
+    <a class="topbar__back" href="index.html">&#8592; Back to Portfolio</a>
+    <button class="topbar__print" onclick="window.print()">Download / Print CV</button>
+  </div>
+
+  <!-- ══ CV DOCUMENT ══ -->
+  <div class="cv" role="main">
+
+    <!-- Header -->
+    <header class="cv__header">
+      <p class="cv__label">Curriculum Vitae</p>
+      <h1 class="cv__name">Tahseen Ahmed Kiani</h1>
+      <p class="cv__title">Professional Photographer</p>
+      <div class="cv__contact-row">
+        <span>Gujarkhan, Punjab, Pakistan</span>
+        <span>&middot;</span>
+        <span><a href="tel:+923405346196">+92 340-5346196</a></span>
+        <span>&middot;</span>
+        <span><a href="https://instagram.com/qaiserstudio" target="_blank" rel="noopener">@qaiserstudio</a></span>
+        <span>&middot;</span>
+        <span><a href="https://www.facebook.com/QaiserStudioGujarkhan" target="_blank" rel="noopener">Facebook</a></span>
+      </div>
+    </header>
+
+    <!-- Profile -->
+    <section class="cv__section cv__profile">
+      <h2 class="cv__section-title">Profile</h2>
+      <p>
+        Professional photographer with three years of dedicated studio and field practice at Qaiser Studio, Gujarkhan. Specialising in wedding, portrait, commercial, and event photography, with a consistent record of delivering technically precise and aesthetically refined images across a wide range of commissions — from intimate family portraits to large-scale ceremonial and corporate productions.
+      </p>
+      <p>
+        Proficient with professional DSLR and mirrorless camera systems, studio lighting rigs, and on-location setups. Skilled in post-production using Adobe Lightroom and Photoshop. Known for meticulous attention to detail, strong client communication, and the ability to work efficiently under pressure in dynamic and fast-paced environments.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Professional Experience</h2>
+
+      <div class="exp__item">
+        <div class="exp__meta">
+          <span class="exp__role">Professional Photographer</span>
+          <span class="exp__period">2023 &ndash; 2026</span>
+        </div>
+        <p class="exp__org">Qaiser Studio &mdash; Shopping Center, Shop #93, Gujarkhan, Punjab, Pakistan</p>
+        <p class="exp__desc">
+          Full-cycle photography services across weddings, commercial campaigns, portrait sessions, and large-scale events. Responsibilities included pre-shoot planning and client consultation, on-site photography direction and execution, studio and location lighting design, and comprehensive post-production editing and retouching. Managed project timelines, client expectations, and final deliverables independently. Maintained and operated professional camera equipment and a full studio lighting infrastructure. Consistently received positive client feedback for image quality and professionalism.
+        </p>
+      </div>
+    </section>
+
+    <!-- Specialisms -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Specialisms</h2>
+      <div class="spec__list">
+        <span class="spec__tag">Wedding Photography</span>
+        <span class="spec__tag">Portrait Photography</span>
+        <span class="spec__tag">Commercial Photography</span>
+        <span class="spec__tag">Event Coverage</span>
+        <span class="spec__tag">Studio Photography</span>
+        <span class="spec__tag">On-Location Shoots</span>
+        <span class="spec__tag">Nikah &amp; Walima</span>
+        <span class="spec__tag">Corporate Events</span>
+        <span class="spec__tag">Documentary Coverage</span>
+        <span class="spec__tag">Automotive &amp; Luxury</span>
+        <span class="spec__tag">Stage &amp; Performance</span>
+        <span class="spec__tag">Family Portraits</span>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Technical Skills</h2>
+      <div class="skills__grid">
+        <div class="skill__cat">
+          <h4>Camera &amp; Equipment</h4>
+          <ul>
+            <li>Professional DSLR Systems</li>
+            <li>Mirrorless Camera Systems</li>
+            <li>Studio Lighting Rigs</li>
+            <li>On-Location Flash Setup</li>
+            <li>Reflectors &amp; Diffusers</li>
+          </ul>
+        </div>
+        <div class="skill__cat">
+          <h4>Post-Production</h4>
+          <ul>
+            <li>Adobe Lightroom</li>
+            <li>Adobe Photoshop</li>
+            <li>Colour Grading</li>
+            <li>Skin Retouching</li>
+            <li>Image Composition</li>
+          </ul>
+        </div>
+        <div class="skill__cat">
+          <h4>Professional</h4>
+          <ul>
+            <li>Client Communication</li>
+            <li>Project Management</li>
+            <li>Creative Direction</li>
+            <li>Brief Interpretation</li>
+            <li>Deadline Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients & Commission Types -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Clients &amp; Commission Types</h2>
+      <ul class="clients__list">
+        <li>Qaiser Studio</li>
+        <li>Wedding Ceremonies</li>
+        <li>Nikah &amp; Walima Receptions</li>
+        <li>Corporate Events</li>
+        <li>Inaugural Ceremonies</li>
+        <li>Community Gatherings</li>
+        <li>Portrait Commissions</li>
+        <li>Commercial Photography</li>
+        <li>Automotive &amp; Luxury Vehicles</li>
+        <li>Stage &amp; Performance Events</li>
+        <li>Family Portraits</li>
+        <li>Documentary Coverage</li>
+      </ul>
+    </section>
+
+    <!-- Certification -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Certification</h2>
+      <div class="cert__item">
+        <span class="cert__year">2026</span>
+        <div class="cert__body">
+          <h4>Experience Certificate — Professional Photographer</h4>
+          <p>Issued by Qaiser Studio, Gujarkhan, Punjab, Pakistan</p>
+          <p>Reference: REF-001</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Languages</h2>
+      <div class="lang__row">
+        <div class="lang__item">
+          <strong>Urdu</strong>
+          <span>Native</span>
+        </div>
+        <div class="lang__item">
+          <strong>Punjabi</strong>
+          <span>Native</span>
+        </div>
+        <div class="lang__item">
+          <strong>English</strong>
+          <span>Conversational</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cv__footer">
+      <span>Tahseen Ahmed Kiani &mdash; Gujarkhan, Pakistan</span>
+      <span>References available on request</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

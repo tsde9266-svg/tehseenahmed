@@ -250,6 +250,19 @@ p {
   width: 100%;
 }
 
+.nav__cv-btn {
+  border: 1px solid var(--gold) !important;
+  color: var(--gold) !important;
+  padding: .35rem .9rem !important;
+  letter-spacing: .1em;
+  transition: background .2s, color .2s !important;
+}
+.nav__cv-btn::after { display: none !important; }
+.nav__cv-btn:hover {
+  background: var(--gold) !important;
+  color: var(--black) !important;
+}
+
 /* Hamburger */
 .nav__toggle {
   display: none;
