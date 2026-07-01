@@ -60,6 +60,11 @@
       transition: color .2s;
     }
     .topbar__back:hover { color: var(--white); text-decoration: none; }
+    .topbar__actions {
+      display: flex;
+      gap: .7rem;
+      align-items: center;
+    }
     .topbar__print {
       font-family: var(--ff-body);
       font-size: .78rem;
@@ -74,6 +79,26 @@
       transition: opacity .2s;
     }
     .topbar__print:hover { opacity: .85; }
+    .topbar__download {
+      font-family: var(--ff-body);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: .55rem 1.4rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background .2s, color .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .topbar__download:hover {
+      background: var(--gold);
+      color: var(--black);
+      text-decoration: none;
+    }
 
     /* ── CV wrapper ── */
     .cv {
@@ -332,7 +357,10 @@
   <!-- Top bar — screen only -->
   <div class="topbar" aria-hidden="false">
     <a class="topbar__back" href="index.html">&#8592; Back to Portfolio</a>
-    <button class="topbar__print" onclick="window.print()">Download / Print CV</button>
+    <div class="topbar__actions">
+      <a class="topbar__download" href="Tahseen_Ahmed_Kiani_CV.pdf" download="Tahseen_Ahmed_Kiani_CV.pdf">Download PDF</a>
+      <button class="topbar__print" onclick="window.print()">Print CV</button>
+    </div>
   </div>
 
   <!-- ══ CV DOCUMENT ══ -->
